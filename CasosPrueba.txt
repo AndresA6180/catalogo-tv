@@ -1,0 +1,304 @@
+//
+//  main.cpp
+//  SituacionProblemaFinal - caso 1 - Avance 1  - y caso 2 - Avance 2 
+//
+//  Created by Ma. Guadalupe Roque on 12/11/20.
+//  Copyright © 2020 Invitado. All rights reserved.
+//
+// ********************************************* DETALLE IMPORTANTE -********************************************************************
+
+//. el método imprimir de la clase Serie (version anterior )despliega los atributos en el siguiente orden:
+// cout << id << ", " << titulo << ", " <<  duracion << ", " << genero << ", " << cantidad << ", " <<  calificacion << endl;
+// tambien va a imprimir todos los epido
+
+// método imprimir( ) de Episodio
+// cout << titulo << ", " <<  temporada << ", " <<  calificacion << endl;
+
+// ********************************************* DETALLE IMPORTANTE -********************************************************************
+/*
+
+Caso de Prueba 1-
+Caso de Prueba
+  
+
+case 1:
+     negocio.setSerie(0,  negocio.getSerie(5));
+     negocio.getSerie(5).imprimir();
+     negocio.getSerie(0).imprimir();
+     negocio.calculaCalPromedioSerie(); //NO DESPLIEGA SOLO ACTUALIZA
+     negocio.reporteTodasSeries();
+Datos de entrada:
+1
+Datos de salida:
+105, Breaking Bad, Drama, 49, 0, 4.95
+105, Breaking Bad, Drama, 49, 0, 4.95
+ReporteSeries
+105, Breaking Bad, Drama, 49, 0, 0
+
+101, Reign, Romance, 42, 5, 8.84
+Pilot, 1, 9.5
+The Consummation, 1, 10
+In a Clearing, 3, 9.5
+The Reign, 4, 8
+Long Live the King, 1, 7.2
+
+102, Suits, Drama, 43, 0, 0
+
+103, The Good Place, Comedia, 22, 5, 8.46
+Everything is Fine, 1, 8.1
+Janet and Michael, 2, 8.2
+The Trolley Problem, 2, 8.7
+The Brainy Bunch, 3, 7.7
+Whenever You're Ready, 4, 9.6
+
+104, Cowboy Bebop, Animación, 22, 5, 8.42
+Asteroid Blues, 1, 8.2
+Stray dog strut, 1, 7.5
+Honky tonk women, 1, 7.8
+Ballad of fallen angels, 1, 9.2
+The Real Folk Blues: Part 2, 1, 9.4
+
+105, Breaking Bad, Drama, 49, 0, 0
+
+106, Malcolm in the middle, Comedia, 23, 0, 0
+
+107, HIMYM, Comedia, 22, 0, 0
+
+108, Club de Cuervos, Comedia, 42, 1, 9.6
+Todos Somos Cuervos, 4, 9.6
+
+109, Peaky Blinders , Drama, 60, 0, 0
+
+110, Steven Universe, Animación, 22, 0, 0
+
+111, Modern Family, Comedia, 22, 5, 9.24
+Summer Lovin, 7, 9.1
+She Crazy, 7, 9.3
+Express Yourself, 7, 9.2
+Five Minutes, 8, 9.1
+The Alliance , 8, 9.5
+
+112, Merlin, Fantasía, 42, 0, 0
+
+113, Game of Thrones, Fantasía, 60, 0, 0
+
+114, That 70s Show, Comedia, 22, 2, 8.75
+That 70's Pilot, 1, 8.5
+That 70's Finale, 8, 9
+
+115, The Queen's Gambit, Drama, 60, 0, 0
+
+116, Blacklist, Drama, 45, 0, 0
+
+117, Stranger Things, Ciencia ficcion, 42, 3, 9.3
+Chapter One: The Vanishing of Will Byers, 1, 9
+Chapter One: MADMAX, 2, 9.3
+"Chapter One: Suzie Do You Copy?", 3, 9.6
+
+118, The boys, ficcion superheroes, 50, 0, 0
+
+119, Love Death + Robots, Ciencia ficcion, 20, 1, 8.1
+Good Hunting, 1, 8.1
+
+120, Full Metal Alchemis Brotherhood, Animación, 23, 1, 9.8
+Pilot, 1, 9.8
+
+121, Gossip Girl, Drama, 42, 0, 0
+
+122, Gilmore Girls, Drama, 44, 3, 8.73333
+Pilot, 1, 8.3
+The Lorelai's First Day at Yale, 4, 8.7
+Bon Voyage, 7, 9.2
+
+123, Dark, Ciencia ficcion, 50, 0, 0
+
+124, Kokoro Connect, Romance, 25, 0, 0
+
+125, Midhunter  , Thriller, 60, 0, 0
+
+126, How I Met Your Mother, Comedia, 22, 4, 9.725
+Pilot, 1, 9.5
+Last Forever Part 2, 9, 9.7
+Slap Bet, 2, 9.8
+Intervention, 4, 9.9
+
+127, One Punch Man, Animación, 24, 0, 0
+
+128, Glee, Drama, 43, 0, 0
+
+129, Game of thrones, Fantasy, 60, 0, 0
+
+130, Money Heist, Thriller, 59, 0, 0
+
+131, The Umbrella Academy, Acción, 53, 2, 9.35
+The White Violin, 1, 9.5
+The End of Something, 2, 9.2
+
+132, Trollhunters , Fantasía , 24, 0, 0
+
+133, Adventure Time, Fantasía, 11, 3, 9.3
+The Hall of Egress, 7, 9.3
+Skyhooks II, 9, 8.9
+Come along with me, 10, 9.7
+
+134, Erased, Animación, 24, 0, 0
+
+135, The Sopranos, Drama, 50, 3, 9.83333
+Made in America, 6, 9.5
+Long Term Parking, 5, 10
+Join the club, 6, 10
+
+136, Gotham, Ficcion , 45, 0, 0
+
+137, For All Mankind, Drama, 60, 5, 9.1
+Red Moon, 1, 8.5
+Prime Crew, 1, 9
+Into the Abyss, 1, 9
+Bent Bird, 1, 9.5
+A City Upon a Hill, 1, 9.5
+
+Promedio Series :3.59346
+
+
+
+case 2:
+    // Retorna la cantiadad de series que tenemos en existencia
+    cout << negocio.getCantidadSeries() << endl;
+    negocio.consultaEpisodiosConCalificacion(9.5);
+Datos de entrada:
+2
+Datos de salida:
+38
+ReporteEpisodiosConCalificacion:9.5
+101, Reign, Romance, 42, 5, 4.5
+Pilot, 1, 9.5
+In a Clearing, 3, 9.5
+
+111, Modern Family, Comedia, 22, 5, 4.6
+The Alliance , 8, 9.5
+
+126, How I Met Your Mother, Comedia, 22, 4, 5
+Pilot, 1, 9.5
+
+131, The Umbrella Academy, Acción, 53, 2, 4.3
+The White Violin, 1, 9.5
+
+135, The Sopranos, Drama, 50, 3, 5
+Made in America, 6, 9.5
+
+137, For All Mankind, Drama, 60, 5, 4.5
+Bent Bird, 1, 9.5
+A City Upon a Hill, 1, 9.5
+
+
+
+case 3:
+  negocio.reporteConCalificacion(4.5);
+  break;
+
+Datos de entrada:
+3
+Datos de salida:
+ReporteSeriesConCalificacion:4.5
+101, Reign, Romance, 42, 5, 4.5
+Pilot, 1, 9.5
+The Consummation, 1, 10
+In a Clearing, 3, 9.5
+The Reign, 4, 8
+Long Live the King, 1, 7.2
+
+107, HIMYM, Comedia, 22, 0, 4.5
+
+123, Dark, Ciencia ficcion, 50, 0, 4.5
+
+127, One Punch Man, Animación, 24, 0, 4.5
+
+130, Money Heist, Thriller, 59, 0, 4.5
+
+137, For All Mankind, Drama, 60, 5, 4.5
+Red Moon, 1, 8.5
+Prime Crew, 1, 9
+Into the Abyss, 1, 9
+Bent Bird, 1, 9.5
+A City Upon a Hill, 1, 9.5
+
+
+
+ case 4:
+   // Calcula la calificación promedio de todas las serie en base a sus episodios y despliega su titulo y su calificación promedio
+   negocio.calculaCalPromedioSerie(); //NO DESPLIEGA SOLO ACTUALIZA
+  // Despliega las series con calificacion 0
+   negocio.reporteConCalificacion(0);
+
+  break;
+
+Datos de entrada:
+4
+Datos de salida:
+ReporteSeriesConCalificacion:0
+102, Suits, Drama, 43, 0, 0
+
+105, Breaking Bad, Drama, 49, 0, 0
+
+106, Malcolm in the middle, Comedia, 23, 0, 0
+
+107, HIMYM, Comedia, 22, 0, 0
+
+109, Peaky Blinders , Drama, 60, 0, 0
+
+110, Steven Universe, Animación, 22, 0, 0
+
+112, Merlin, Fantasía, 42, 0, 0
+
+113, Game of Thrones, Fantasía, 60, 0, 0
+
+115, The Queen's Gambit, Drama, 60, 0, 0
+
+116, Blacklist, Drama, 45, 0, 0
+
+118, The boys, ficcion superheroes, 50, 0, 0
+
+121, Gossip Girl, Drama, 42, 0, 0
+
+123, Dark, Ciencia ficcion, 50, 0, 0
+
+124, Kokoro Connect, Romance, 25, 0, 0
+
+125, Midhunter  , Thriller, 60, 0, 0
+
+127, One Punch Man, Animación, 24, 0, 0
+
+128, Glee, Drama, 43, 0, 0
+
+129, Game of thrones, Fantasy, 60, 0, 0
+
+130, Money Heist, Thriller, 59, 0, 0
+
+132, Trollhunters , Fantasía , 24, 0, 0
+
+134, Erased, Animación, 24, 0, 0
+
+136, Gotham, Ficcion , 45, 0, 0
+
+
+
+case 5:
+   // Reporte de Series que tienen cierto genero -
+  negocio.reporteGenero("Ciencia ficcion");
+  break;
+Datos de entrada:
+5
+
+Datos de salida:
+ReporteGenero:Ciencia ficcion
+117, Stranger Things, Ciencia ficcion, 42, 3, 5
+Chapter One: The Vanishing of Will Byers, 1, 9
+Chapter One: MADMAX, 2, 9.3
+"Chapter One: Suzie Do You Copy?", 3, 9.6
+
+119, Love Death + Robots, Ciencia ficcion, 20, 1, 4.25
+Good Hunting, 1, 8.1
+
+123, Dark, Ciencia ficcion, 50, 0, 4.5
+
+
